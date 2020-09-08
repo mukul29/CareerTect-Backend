@@ -1,3 +1,7 @@
+if(process.env.NODE_ENV !== 'production') {
+    require('dotenv').config();
+}
+
 const express = require("express");
 const bodyParser = require("body-parser");
 const fs = require("fs");
@@ -57,4 +61,6 @@ app.use((error, req, res, next) => {
     res.json({ message: error.message || "Something went wrong." });
 });
 
-app.listen(PORT);
+app.listen(PORT, () => {
+    console.log(`Server listening on port ${PORT}`);
+});
