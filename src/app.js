@@ -10,7 +10,7 @@ const HttpError = require("./models/http-error");
 const app = express();
 
 // Constants
-const LISTEN_PORT = 5000;
+const PORT = process.env.PORT || 5000;
 const LOG_TAG = "[app.js] ";
 
 // Enable all cors requests
@@ -57,4 +57,4 @@ app.use((error, req, res, next) => {
     res.json({ message: error.message || "Something went wrong." });
 });
 
-app.listen(5000);
+app.listen(PORT);
