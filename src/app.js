@@ -5,10 +5,6 @@ const path = require("path");
 const cors = require("cors");
 
 const HttpError = require("./models/http-error");
-// const usersRoutes = require("./routes/users-routes");
-// the database.js file imported in the following line has credentials
-// which aren't zipped and added to .gitignore for security users
-// const { USER_CREDENTIALS } = require("./values/database");
 
 // initialize express app
 const app = express();
