@@ -9,6 +9,9 @@ const path = require("path");
 const cors = require("cors");
 
 const HttpError = require("./models/http-error");
+const userRoutes = require("./routes/users-routes.js");
+const jobRoutes = require("./routes/jobs-routes.js");
+
 
 // initialize express app
 const app = express();
@@ -30,6 +33,8 @@ app.use(bodyParser.json());
 app.use("/uploads/images", express.static(path.join('uploads', 'images')));
 
 // ADD ROUTES HERE
+app.use("/api/users", userRoutes);
+app.use("/api/jobs", jobRoutes);
 
 
 ///////////////////////////
