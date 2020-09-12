@@ -172,7 +172,7 @@ const getApplicantsByJobIdDB = async (
     poolType = pool
 ) => {
 
-    const queryToRun = `SELECT A.APPLICANT_ID, U.FULLNAME, U.EMAIL
+    const queryToRun = `SELECT A.APPLICANT_ID, U.FULLNAME, U.EMAIL, A.ACCEPTED
         FROM JOB_PORTAL.JOBS as J, JOB_PORTAL.JOBS_APPLICANTS as A, JOB_PORTAL.USERS as U
         WHERE J.JOB_ID=A.JOB_ID and A.APPLICANT_ID=U.USER_ID and J.JOB_ID=$1
         LIMIT ${config.itemsPerPage} OFFSET ${(config.page - 1) * config.itemsPerPage}`;
