@@ -1,7 +1,7 @@
 # CareerTect-Backend
 ## Backend to CareerTect - Your Personal Career Architect
 
-#### A simple job portal backend utilizing Node.js, Express and PostgresSQL
+#### A simple job portal backend utilizing Node.js, Express and PostgreSQL
 
 You can find the the finished backend on [Heroku](https://careertect-backend.herokuapp.com/)
 
